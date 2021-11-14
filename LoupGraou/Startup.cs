@@ -53,7 +53,7 @@ namespace LoupGraou
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "api/{controller}/{action=Index}/{id?}");
-                endpoints.MapHub<CharHub>("api/charHub");
+                endpoints.MapHub<CharHub>("/api/charHub");
             });
 
             app.UseSpa(spa =>
