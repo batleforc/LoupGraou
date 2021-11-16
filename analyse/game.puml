@@ -1,0 +1,19 @@
+@startuml
+
+class Game{
+  string name
+  Array<Player> Players
+}
+
+
+class Player{
+  string username
+  socket socket
+}
+abstract Role {
+  void Vote()
+}
+
+Role -- Player : "State Patern"
+Game -- Player 
+@enduml
