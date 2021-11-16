@@ -3,17 +3,37 @@
 class Game{
   string name
   Array<Player> Players
+  Array<Turn> history
 }
 
 
 class Player{
   string username
-  socket socket
+  Picture userPic
+  boolean isAlive
+  Socket socket
+  Role role
+  Array<Role> subRoles
 }
 abstract Role {
-  void Vote()
+  int DailyVotePoder()
+  int NightVotePoder()
+  int NightOrder()
+  void NightAction()
+  void Die()
+  PublicPlayer seenBy()
+  void isVictory()
+}
+
+class PublicPlayer{
+  string username
+  Picture userPic
+  boolean isAlive
+  Role? role
 }
 
 Role -- Player : "State Patern"
-Game -- Player 
+Game -- Player
+PublicPlayer -- Role : Rempli avec les information\nen fonction de qui demande
+PublicPlayer -- Player : Version aleger
 @enduml

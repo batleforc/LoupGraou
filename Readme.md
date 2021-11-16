@@ -1,9 +1,9 @@
 # Loup Graou
 
-# Specification jeux de base
+## Specification jeux de base
 
-- X joueur > 4
-- 1 joueur = 1 Role + SubRole
+- X joueur > 4 && < 23
+- 1 joueur = 1 Role + x SubRole
 - 23 Role dans le jeux de base
   - 4 loups-garous
   - 13 simple villageois
@@ -33,3 +33,10 @@
     - Voyante
     - Vote Loups-garous (et espionnage du T-Chat sans les nom par la petite fille)
     - Sorcière
+- X chat
+  - Day Chat (Tout le monde)
+  - Dead Chat (Les mort)
+  - Night Chat
+    - Werewolf (Full Chat)
+      - Petite Fille (Chat mais sans les nom)
+    - Chat action
