@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Moteur
 {
-    internal interface IUser
+    public class Game
     {
-        string getUsername();
-        string getSocket();
-        string getRole();
-        string isAlive();
+        string name;
+        Player[] players;
+        string[] history;
     }
 }
