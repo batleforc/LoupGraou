@@ -23,6 +23,7 @@ abstract Role {
   void Die()
   PublicPlayer seenBy()
   void isVictory()
+  boolean IsSubRole()
 }
 
 class PublicPlayer{
