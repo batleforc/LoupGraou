@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Moteur
+namespace Moteur.Role
 {
     public interface IRole
     {
-        int DailyVotePoder();
-        int NightVotePoder();
-        int NightOrder();
-        void NightAction();
-        void Die();
-        void Victory();
-        bool IsSubRole();
+        public int DailyVotePoder();
+        public int NightVotePoder();
+        public int NightOrder();
+        public void NightAction();
+        public void Die();
+        public void Victory();
+        public bool IsSubRole();
+        public EnumTeam GetTeam();
     }
 }
