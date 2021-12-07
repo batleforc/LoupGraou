@@ -8,6 +8,9 @@ namespace Moteur.Role
 {
     public interface IRole
     {
+        public string Name { get; }
+        public string Description { get; }
+        public string Image { get; }
         public int DailyVotePoder();
         public int NightVotePoder();
         public int NightOrder();

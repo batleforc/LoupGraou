@@ -1,9 +1,10 @@
 using LoupGraou.Hubs;
-
+using Moteur;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddSingleton<IGameHandler,SingleGameHandler>();
 builder.Services.AddControllers();
 builder.Services.AddSignalRCore();
 builder.Services.AddEndpointsApiExplorer();
@@ -23,7 +24,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.UseEndpoints(endpoints=> {
-    endpoints.MapHub<ChatHub>("/api/chat");
+    endpoints.MapHub<ChatHub>("/async/chat");
 });
 
 app.Run();

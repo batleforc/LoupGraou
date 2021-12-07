@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Moteur
 {
-    interface IGameHandler
+    public interface IGameHandler
     {
         IGame GetGame(string game);
         void DeleteGame();
